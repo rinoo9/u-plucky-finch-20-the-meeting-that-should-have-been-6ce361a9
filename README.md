@@ -8,11 +8,13 @@ Entry for the [make.fun bounty](https://make.fun/bounty/u-plucky-finch-20-the-me
 
 ## The entry
 
-> This meeting was supposed to be an email, but the email needed a meeting to explain why it couldn't be an email.
+> We spent an hour in a meeting deciding to send the email we could have sent before the meeting started.
+
+The meeting eats an hour of everyone's time just to decide to send the email that would have made the meeting unnecessary — the meeting's only decision is to admit it should never have happened.
 
 ## How it works
 
-`main.py` is deterministic: it writes exactly that one line to `/output/entry.txt`, with no trailing newline and no randomness, so every run produces byte-identical output.
+`main.py` is deterministic: it writes exactly that one line to `/output/entry.txt`, with no trailing newline and no randomness. Before writing, it runs the line through its own gate check (non-blank, one line, at most 200 characters) and exits with an error instead of shipping a line the gate would refuse, so every run produces byte-identical output.
 
 ```sh
 python3 main.py
